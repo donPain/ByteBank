@@ -15,7 +15,7 @@ class _ContactsListState extends State<ContactsList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Contacts'),
+        title: Text('Transfer'),
       ),
       body: FutureBuilder<List<Contact>>(
         initialData: [],
@@ -46,7 +46,6 @@ class _ContactsListState extends State<ContactsList> {
                 },
                 itemCount: contacts.length,
               );
-              break;
           }
           return Text('Unknown error');
         },
@@ -60,9 +59,7 @@ class _ContactsListState extends State<ContactsList> {
                   builder: (context) => ContactForm(),
                 ),
               )
-              .then(
-                (newContact) => debugPrint(newContact.toString()),
-              );
+              .then((value) => setState(() {}));
         },
         child: Icon(
           Icons.add,

@@ -50,6 +50,9 @@ class _ContactFormState extends State<ContactForm> {
               child: SizedBox(
                 width: double.maxFinite,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.green[900],
+                  ),
                   child: Text('Create'),
                   onPressed: () {
                     final String name = _nameController.text;
@@ -58,9 +61,6 @@ class _ContactFormState extends State<ContactForm> {
                     final Contact newContact = Contact(0, name, accountNumber);
                     _dao.save(newContact).then((id) => Navigator.pop(context));
                   },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.green[900],
-                  ),
                 ),
               ),
             )
