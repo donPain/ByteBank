@@ -1,11 +1,11 @@
 //import 'package:bytebank/models/contact.dart';
 import 'package:flutter/material.dart';
-import 'database/app_database.dart';
-import 'models/contact.dart';
+import 'http/webclient.dart';
 import 'screens/dashboard.dart';
 
 void main() {
   runApp(ByteBankApp());
+  findAll();
 }
 
 class ByteBankApp extends StatelessWidget {

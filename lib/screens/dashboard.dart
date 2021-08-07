@@ -86,7 +86,7 @@ class _FeatureItem extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 8.0),
                         child:
                             Text(name, style: TextStyle(color: Colors.white)),
-                      )
+                      ),
                     ],
                   ),
                 ))));
