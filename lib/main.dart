@@ -1,11 +1,12 @@
 //import 'package:bytebank/models/contact.dart';
 import 'package:flutter/material.dart';
 import 'http/webclient.dart';
+import 'models/contact.dart';
+import 'models/transaction.dart';
 import 'screens/dashboard.dart';
 
 void main() {
   runApp(ByteBankApp());
-  findAll().then((transactions) => print('new transactions $transactions'));
 }
 
 class ByteBankApp extends StatelessWidget {
